@@ -97,7 +97,7 @@ function Idriss() {
     setBgcard3('bg-white')
 
     setChoix('Arcade')
-    setChoixtmp(choix)
+ 
 
     setChoixNb(arcade)
   }
