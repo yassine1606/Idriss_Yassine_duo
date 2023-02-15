@@ -16,7 +16,7 @@ function Idriss() {
           </div>
 
           <div className="w-[70%]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae earum reiciendis obcaecati ducimus cumque vero, ipsa, sint dolor possimus optio qui? Nobis itaque quibusdam blanditiis adipisci quod necessitatibus eum corporis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae earum reiciendis obcaecati ducimus cumque vero, ipsa, sint dolor possimus optio qui? Nobis itaque quibusdam blanditiis adipisci quod necessita 
             
           </div>
 
