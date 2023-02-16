@@ -14,7 +14,7 @@ export const Cmp1 = ({active1,valueUn,valueDeux,valueTrois,un,deux,trois,next}) 
                 <p className="text-blue-900 font-bold">Your email is:{valueDeux}</p>
                 <input className="p-2 w-full border-2 border-gray-200 rounded-xl" type="text" onChange={deux} placeholder="vingt-six@email.com" />
               </div>
-              <div className=" mb-20">
+              <div className=" mb-10">
                 <p className="text-blue-900 font-bold">Your name is:{valueTrois}</p>
                 <input className="p-2 w-full border-2 border-gray-200 rounded-xl" type="text" onChange={trois} placeholder="e.g+1 234 567 890" />
               </div>

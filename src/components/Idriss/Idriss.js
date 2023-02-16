@@ -15,7 +15,7 @@ function Idriss() {
     { nb: 1, step: "step1", titre: "Your info", },
     { nb: 2, step: "step2", titre: "Select Plan" },
     { nb: 3, step: "step3", titre: "add-ons" },
-    { nb: 4, step: "step4", titre: "summary" }
+    { nb: 4, step: "step4", titre: "summary"}
   ])
 
 
@@ -239,23 +239,6 @@ function Idriss() {
               choixTmp={choixTmp} tmp={tmp} active4={active4} />
 
             <Yassine active3={active3} next3={next3} back3={back3}/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div >
 
         </div>
