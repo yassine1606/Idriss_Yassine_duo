@@ -1,5 +1,5 @@
 import { useState } from "react" 
- import img1 from "../img/arcade.svg"
+import img1 from "../img/arcade.svg"
 import img2 from "../img/advenced.svg"
 import img3 from "../img/pro.svg"
 import { Cmp1 } from "./cmp1/cmp1"
@@ -14,15 +14,13 @@ function Idriss() {
     { nb: 2, step: "step2", titre: "Select Plan" },
     { nb: 3, step: "step3", titre: "add-ons" },
     { nb: 4, step: "step4", titre: "summary" }
-   ])
-
+  ])
 
 
  //Function
-   const [valueUn, setValueun] = useState('')
+  const [valueUn, setValueun] = useState('')
   const [valueDeux, setValuedeux] = useState('')
   const [valueTrois, setValuetrois] = useState('')
-
 
   const [arcade, setArcade] = useState(9)
   const [advenced, setAdvenced] = useState(12)
@@ -64,28 +62,17 @@ function Idriss() {
   const trois = (e) => {
     setValuetrois(e.target.value)
   }
-
-
-
   //onclick
-
   const trans = () => {
     console.log(transition);
     transition === "translate-x-0" ? setTransition("translate-x-xx") : setTransition('translate-x-0');
-
-
     mois === "text-blue-900" ? setMois('text-gray-400') : setMois('text-blue-900')
     year === "text-gray-400" ? setYear('text-blue-900') : setYear('text-gray-400')
-
     arcade === 9 ? setArcade(90) : setArcade(9)
     advenced === 12 ? setAdvenced(120) : setAdvenced(12)
     pro === 15 ? setPro(150) : setPro(15)
-
     tmp === '/mo' ? setTmp('/yr') : setTmp('/mo')
-
-
     transition === "translate-x-0" ? setChoixtmp('Yearly') : setChoixtmp('Monthly')
-
   }
 
   // //finishing
@@ -97,7 +84,6 @@ function Idriss() {
     setBgcard3('bg-white')
 
     setChoix('Arcade')
- 
 
     setChoixNb(arcade)
   }
@@ -137,67 +123,43 @@ function Idriss() {
 
     setNav(nav)
 
-   zz.forEach(element => {
+zz.forEach(element => {
     element.classList.remove('bgNb')
     zz[1].classList.add('bgNb')
-   });
-
-
-
-
+});
   }
-
   // Deuxieme next et back
   const next2 = () => {
     setActive2('hidden')
     setActive4('block')
-
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[3].classList.add('bgNb')
-     });
-
+});
   }
   const back2 = () => {
     setActive1('block')
     setActive2('hidden')
     setActive4('hidden')
-
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[0].classList.add('bgNb')
-     });
-
+});
   }
-
-
   const change = () => {
     setActive2('block')
     setActive4('hidden')
-
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[1].classList.add('bgNb')
-     });
- 
+});
     setChoixNb(0)
-
-   
-
-   
-    
   }
-
   // 
-
-
   // if (bgCard1 === 'bg-white' && bgCard2 === 'bg-white' && bgCard3 === 'bg-white'){
   //   alert('choisi')
   // }
-
-
-  
-   return (
+return (
     <div className="Idriss">
       <div className="w-full h-screen flex justify-center items-center bg-gray-100">
         <div className="w-[60%] h-[77%] bg-white flex p-3 rounded-xl">
