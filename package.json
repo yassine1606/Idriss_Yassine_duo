@@ -11,7 +11,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "i": "^0.3.7",
+=======
+    "install": "^0.13.0",
+>>>>>>> e58dad1fc42c35604f7cf3d50aec2725e0868ba3
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",

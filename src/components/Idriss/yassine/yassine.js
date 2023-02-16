@@ -5,7 +5,7 @@ export const Yassine = ({back2, next2}) => {
   return (
     <div>
         <h1 className='text-3xl	'>Pick add-ons</h1>
-        <p>Add-ons help enhance your gaming experience</p>
+        <p>Add-ons help enhance your gam ing experience</p>
         <div>
             <div className='ddc p-1 border-2 rounded-md border-gray flex justify-center w-3/4 hover:bg-gray-200 hover:border-purple-800 mt-3'>
             <input type="checkbox" />
