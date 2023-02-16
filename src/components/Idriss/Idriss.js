@@ -32,9 +32,9 @@ function Idriss() {
 
 
   const [active1, setActive1] = useState('block')
-  const [active2, setActive2] = useState('block')
+  const [active2, setActive2] = useState('hidden')
   // const [active3, setActive3] = useState('hidden')
-  const [active4, setActive4] = useState('block')
+  const [active4, setActive4] = useState('hidden')
 
   const [mois, setMois] = useState('text-blue-900')
   const [year, setYear] = useState('text-gray-400')
