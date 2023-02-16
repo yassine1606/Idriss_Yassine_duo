@@ -4,6 +4,7 @@ import img2 from "../img/advenced.svg"
 import img3 from "../img/pro.svg"
 import { Cmp1 } from "./cmp1/cmp1"
 import { Cmp2 } from "./cmp2/cmp2"
+import { Adil } from "./Adil/Adil"
 function Idriss() {
 
 
@@ -17,6 +18,7 @@ function Idriss() {
 
 
 
+  //Function
   const [valueUn, setValueun] = useState('')
   const [valueDeux, setValuedeux] = useState('')
   const [valueTrois, setValuetrois] = useState('')
@@ -84,10 +86,6 @@ function Idriss() {
 
     transition === "translate-x-0" ? setChoixtmp('Yearly') : setChoixtmp('Monthly')
 
-
-
-
-
   }
 
   // //finishing
@@ -99,7 +97,7 @@ function Idriss() {
     setBgcard3('bg-white')
 
     setChoix('Arcade')
- 
+
 
     setChoixNb(arcade)
   }
@@ -139,10 +137,10 @@ function Idriss() {
 
     setNav(nav)
 
-   zz.forEach(element => {
-    element.classList.remove('bgNb')
-    zz[1].classList.add('bgNb')
-   });
+    zz.forEach(element => {
+      element.classList.remove('bgNb')
+      zz[1].classList.add('bgNb')
+    });
 
 
 
@@ -157,7 +155,7 @@ function Idriss() {
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[3].classList.add('bgNb')
-     });
+    });
 
   }
   const back2 = () => {
@@ -168,7 +166,7 @@ function Idriss() {
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[0].classList.add('bgNb')
-     });
+    });
 
   }
 
@@ -180,14 +178,14 @@ function Idriss() {
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[1].classList.add('bgNb')
-     });
- 
+    });
+
     setChoixNb(0)
 
-   
 
-   
-    
+
+
+
   }
 
   // 
@@ -198,7 +196,7 @@ function Idriss() {
   // }
 
 
-  
+
   return (
     <div className="Idriss">
       <div className="w-full h-screen flex justify-center items-center bg-gray-100">
@@ -244,19 +242,15 @@ function Idriss() {
           </div>
 
 
-          
+
 
           <div className="w-[70%]  h-full bg-white pt-10 px-20  ">
 
-          <Cmp1 un={un} deux={deux} trois={trois} next={next} active1={active1} valueUn={valueUn} valueDeux={valueDeux} valueTrois={valueTrois}/>
+            <Cmp1 un={un} deux={deux} trois={trois} next={next} active1={active1} valueUn={valueUn} valueDeux={valueDeux} valueTrois={valueTrois} />
 
 
 
-          <Cmp2 active2={active2} card1={card1} card2={card2} card3={card3} bgCard1={bgCard1} bgCard2={bgCard2} bgCard3={bgCard3} next2={next2} back2={back2} arcade={arcade} pro={pro} advenced={advenced} tmp={tmp} trans={trans} transition={transition} img1={img1} img2={img2} img3={img3} mois={mois} year={year}/>
-           
-
-
-
+            <Cmp2 active2={active2} card1={card1} card2={card2} card3={card3} bgCard1={bgCard1} bgCard2={bgCard2} bgCard3={bgCard3} next2={next2} back2={back2} arcade={arcade} pro={pro} advenced={advenced} tmp={tmp} trans={trans} transition={transition} img1={img1} img2={img2} img3={img3} mois={mois} year={year} />
 
 
 
@@ -266,6 +260,8 @@ function Idriss() {
 
 
 
+            <Adil choix={choix} change={change} choixNb={choixNb}
+              choixTmp={choixTmp} tmp={tmp} active4={active4} />
 
 
 
@@ -276,28 +272,20 @@ function Idriss() {
 
 
 
-{/* 
-            <div className={`${active4} h-full`}>
-
-              <div className="font-bold text-blue-900 text-4xl">Finishing up</div>
-              <div className="text-ggray-500 mt-2 mb-10">Double-check everything looks OK before confirming</div>
-
-              <div className="bg-gray-100 px-3 py-2">
-                <p className="text-blue-900 font-bold">{choix}({choixTmp})</p>
-                <div className="flex justify-between">
-                  <button onClick={change} className="text-xs text-gray-500 underline underline-offset-3 ">Change</button>
-                  <p className="text-blue-900 font-bold"> ${choixNb}{tmp}</p>
-                </div>
 
 
-              </div>
-            </div> */}
 
-          </div>
+
+
+
+
+          </div >
 
         </div>
-      </div>
-    </div>
+
+      </div >
+    </div >
+    
   )
 
 }
