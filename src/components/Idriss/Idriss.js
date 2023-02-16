@@ -138,16 +138,8 @@ setTel('iphone')
     setChoix('Advenced')
     setChoixNb(advenced)
   }
-  const card22 = () => {
-    setBgcard22('bg-gray-200')
+  
 
-    setBgcard11('bg-white')
-    setBgcard33('bg-white')
-
-    setChoix('Advenced')
-
-    setChoixNb(advenced)
-  }
   const card22 = () => {
     setBgcard22('bg-gray-200')
 
@@ -274,7 +266,7 @@ setTel('ultra')
             <Cmp1 un={un} deux={deux} trois={trois} next={next} active1={active1} valueUn={valueUn} valueDeux={valueDeux} valueTrois={valueTrois} />
 
             <Cmp2 active2={active2} card1={card1} card2={card2} card3={card3} bgCard1={bgCard1} bgCard2={bgCard2} bgCard3={bgCard3} next2={next2} back2={back2} arcade={arcade} pro={pro} advenced={advenced} tmp={tmp} trans={trans} transition={transition} img1={img1} img2={img2} img3={img3} mois={mois} year={year} />
-            <Cmp3 active2={active2} card11={card11}  card22={card22} card33={card33} bgCard11={bgCard11} bgCard22={bgCard22} bgCard33={bgCard33} next2={next2} back2={back2} iphone={iphone} ultra={ultra} oneplus={oneplus} transition={transition} img1Phone1={img1Phone1} img2Phone2={img2Phone2} img3Phone3={img3phone3} />
+            {/* <Cmp3 active2={active2} card11={card11}  card22={card22} card33={card33} bgCard11={bgCard11} bgCard22={bgCard22} bgCard33={bgCard33} next2={next2} back2={back2} iphone={iphone} ultra={ultra} oneplus={oneplus}   img1Phone1={img1Phone1} img2Phone2={img2Phone2} img3Phone3={img3phone3} /> */}
 
             <Adil choix={choix} change={change} choixNb={choixNb}
               choixTmp={choixTmp} tmp={tmp}  active4={active4}  tel={tel}  prix={prix} prixY={prixY} />

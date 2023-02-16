@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Cmp3 = ({active2,card11,card22,card33,bgCard11,bgCard22,bgCard33,next2,back2,img1Phone1,img2Phone2,img3Phone3,iphone,ultra,oneplus}) => {
+export const Cmp3 = ({card11,card22,card33,bgCard11,bgCard22,bgCard33,next2,back2,img1Phone1,img2Phone2,img3Phone3,iphone,ultra,oneplus,active5}) => {
     return (
 
-        <div className={`h-full ${active2}`}>
+        <div className={`h-full ${active5}`}>
             <div className="font-bold text-blue-900 text-4xl">Select your Phone</div>
             <div className="text-gray-500 mt-2 mb-10">You have the option of phones</div>
 
