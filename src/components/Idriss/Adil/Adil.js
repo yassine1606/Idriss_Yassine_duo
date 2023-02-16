@@ -24,7 +24,7 @@ export const Adil = () => {
         </div>
       </div>
       <hr/>
-      <div className='flex justify-between  '>
+      <div className='flex justify-between'>
         <div>
           Larger storage 
         </div>
@@ -37,7 +37,7 @@ export const Adil = () => {
         <div>
           Total (per month)
         </div>
-        <div className='text-blue-900'>
+        <div className='text-blue-900    '>
           $11/mo
         </div>
       </div>
