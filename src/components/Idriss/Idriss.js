@@ -8,6 +8,7 @@ import { Cmp2 } from "./cmp2/cmp2"
 import { Adil } from "./Adil/Adil"
 import { Sidebar } from "./sidebar/sidebar"
 import { Yassine } from "./yassine/yassine"
+import { number } from "yargs"
 function Idriss() {
 
 
@@ -62,6 +63,10 @@ function Idriss() {
   const [choix, setChoix] = useState('')
   const [choixTmp, setChoixtmp] = useState('Monthly')
   const [choixNb, setChoixNb] = useState(0)
+
+  //prix total finishing
+  const [total, setTotal] = useState(0)
+  
 
 
   // onchange des input
@@ -135,6 +140,7 @@ function Idriss() {
       zz[1].classList.add('bgNb')
     });
 
+   
   }
   // Deuxieme next et back
   const next2 = () => {
@@ -208,7 +214,7 @@ function Idriss() {
             <Cmp2 active2={active2} card1={card1} card2={card2} card3={card3} bgCard1={bgCard1} bgCard2={bgCard2} bgCard3={bgCard3} next2={next2} back2={back2} arcade={arcade} pro={pro} advenced={advenced} tmp={tmp} trans={trans} transition={transition} img1={img1} img2={img2} img3={img3} mois={mois} year={year} />
 
             <Adil choix={choix} change={change} choixNb={choixNb}
-              choixTmp={choixTmp} tmp={tmp} active4={active4} />
+              choixTmp={choixTmp} tmp={tmp} active4={active4} total={total}/>
 
             <Yassine active3={active3} next3={next3} back3={back3} />
 
