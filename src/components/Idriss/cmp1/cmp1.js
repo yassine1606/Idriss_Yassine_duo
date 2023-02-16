@@ -53,10 +53,7 @@ export const Cmp1 = ({ active1, valueUn, valueDeux, valueTrois, un, deux, trois,
             </div>
             <div className="flex justify-end">
                 <button onClick={next} className="px-4 py-3 text-white bg-blue-900 rounded-xl ">Next Step</button>
+              </div>
             </div>
-        </div>
-
-
-
-    )
+  )
 }

@@ -8,32 +8,35 @@ import { Cmp2 } from "./cmp2/cmp2"
 import { Adil } from "./Adil/Adil"
 import { Sidebar } from "./sidebar/sidebar"
 import { Yassine } from "./yassine/yassine"
+import { Cmp3 } from "./cmp3/cmp3"
+import img1Phone1 from "../img/iphone14.jpeg";
+import img2Phone2 from "../img/samsungS23Ultra.jpeg";
+import img3phone3 from "../img/onePlus10Pro.jpeg";
+
 function Idriss() {
-
-
   //state
-  // const [nav, setNav] = useState([
-  //   { nb: 1, step: "step1", titre: "Your info", },
-  //   { nb: 2, step: "step2", titre: "Select Plan" },
-  //   { nb: 3, step: "step3", titre: "add-ons" },
-  //   { nb: 4, step: "step4", titre: "summary" }
-  // ])
-
-
-  //Function
-
-
-
+  const [nav, setNav] = useState([
+    { nb: 1, step: "step1", titre: "Your info", },
+    { nb: 2, step: "step2", titre: "Select Plan" },
+    { nb: 3, step: "step3", titre: "add-ons" },
+    { nb: 4, step: "step4", titre: "summary" },
+    { nb: 5, step: "step5", titre: "Phone" }
+  ])
 
   //Function
   const [valueUn, setValueun] = useState('')
   const [valueDeux, setValuedeux] = useState('')
   const [valueTrois, setValuetrois] = useState('')
-
   const [arcade, setArcade] = useState(9)
   const [advenced, setAdvenced] = useState(12)
   const [pro, setPro] = useState(15)
   const [tmp, setTmp] = useState('/mo')
+
+  const [iphone] = useState(1500)
+  const [ultra] = useState(1000)
+  const [oneplus] = useState(800)
+
+
 
 
 
@@ -49,6 +52,10 @@ function Idriss() {
   const [bgCard2, setBgcard2] = useState('bg-white')
   const [bgCard3, setBgcard3] = useState('bg-white')
 
+  const [bgCard11, setBgcard11] = useState('bg-white')
+  const [bgCard22, setBgcard22] = useState('bg-white')
+  const [bgCard33, setBgcard33] = useState('bg-white')
+
   const [transition, setTransition] = useState('translate-x-0')
 
 
@@ -56,6 +63,20 @@ function Idriss() {
   const [choix, setChoix] = useState('')
   const [choixTmp, setChoixtmp] = useState('Monthly')
   const [choixNb, setChoixNb] = useState(0)
+
+  const [tel, setTel] = useState('')
+  const [prix, setPrix] = useState(0)
+
+  const [prixY, setPrixY] = useState(0)
+  
+  const [nom1, setNom1] = useState('select ')
+  const [prix1,setPrix1] = useState(133)
+
+  const [nom2, setNom2] = useState('select 2')
+  const [prix2,setPrix2] = useState(233)
+
+  const [nom3, setNom3] = useState('select 3')
+  const [prix3,setPrix3] = useState(333)
 
 
   // onchange
@@ -94,13 +115,62 @@ function Idriss() {
     setChoix('Arcade')
     setChoixNb(arcade)
   }
+ 
+  const card11 = (e) => {
 
+    setBgcard11('bg-gray-200')
+
+    setBgcard22('bg-white')
+    setBgcard33('bg-white')
+
+    setChoix('Arcade')
+
+setPrix(iphone)
+setTel('iphone')
+
+    setChoixNb(arcade)
+  }
   const card2 = () => {
     setBgcard2('bg-gray-200')
     setBgcard1('bg-white')
     setBgcard3('bg-white')
 
     setChoix('Advenced')
+    setChoixNb(advenced)
+  }
+  const card22 = () => {
+    setBgcard22('bg-gray-200')
+
+    setBgcard11('bg-white')
+    setBgcard33('bg-white')
+
+    setChoix('Advenced')
+
+    setChoixNb(advenced)
+  }
+  const card22 = () => {
+    setBgcard22('bg-gray-200')
+
+    setBgcard11('bg-white')
+    setBgcard33('bg-white')
+
+    setChoix('Advenced')
+
+    setChoixNb(advenced)
+
+setPrix(ultra)
+setTel('ultra')
+  }
+  const card33 = () => {
+    setBgcard22('bg-gray-200')
+
+    setBgcard11('bg-white')
+    setBgcard33('bg-white')
+
+    setChoix('Advenced')
+
+    setPrix(oneplus)
+    setTel('one')
     setChoixNb(advenced)
   }
 
@@ -113,6 +183,11 @@ function Idriss() {
     setChoixNb(pro)
   }
 
+
+  const ajoutp = () => {
+    setPrixY(prix1)
+    
+  }
 
   const zz = document.querySelectorAll('.test')
 
@@ -199,11 +274,30 @@ function Idriss() {
             <Cmp1 un={un} deux={deux} trois={trois} next={next} active1={active1} valueUn={valueUn} valueDeux={valueDeux} valueTrois={valueTrois} />
 
             <Cmp2 active2={active2} card1={card1} card2={card2} card3={card3} bgCard1={bgCard1} bgCard2={bgCard2} bgCard3={bgCard3} next2={next2} back2={back2} arcade={arcade} pro={pro} advenced={advenced} tmp={tmp} trans={trans} transition={transition} img1={img1} img2={img2} img3={img3} mois={mois} year={year} />
+            <Cmp3 active2={active2} card11={card11}  card22={card22} card33={card33} bgCard11={bgCard11} bgCard22={bgCard22} bgCard33={bgCard33} next2={next2} back2={back2} iphone={iphone} ultra={ultra} oneplus={oneplus} transition={transition} img1Phone1={img1Phone1} img2Phone2={img2Phone2} img3Phone3={img3phone3} />
 
             <Adil choix={choix} change={change} choixNb={choixNb}
-              choixTmp={choixTmp} tmp={tmp} active4={active4} />
+              choixTmp={choixTmp} tmp={tmp}  active4={active4}  tel={tel}  prix={prix} prixY={prixY} />
 
-            <Yassine active3={active3} next3={next3} back3={back3} />
+
+            <Yassine active3={active3} ajoutp={ajoutp} next3={next3} back3={back3} prixY={prixY} nom1={nom1} prix1={prix1} nom2={nom2} prix2={prix2} nom3={nom3} prix3={prix3}/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           </div >
 
