@@ -1,3 +1,4 @@
+
 import { useState } from "react"
 import img1 from "../img/arcade.svg"
 import img2 from "../img/advenced.svg"
@@ -11,12 +12,16 @@ function Idriss() {
 
 
   //state
-  const [nav, setNav] = useState([
-    { nb: 1, step: "step1", titre: "Your info", },
-    { nb: 2, step: "step2", titre: "Select Plan" },
-    { nb: 3, step: "step3", titre: "add-ons" },
-    { nb: 4, step: "step4", titre: "summary" }
-  ])
+  // const [nav, setNav] = useState([
+  //   { nb: 1, step: "step1", titre: "Your info", },
+  //   { nb: 2, step: "step2", titre: "Select Plan" },
+  //   { nb: 3, step: "step3", titre: "add-ons" },
+  //   { nb: 4, step: "step4", titre: "summary" }
+  // ])
+
+
+  //Function
+
 
 
 
@@ -24,7 +29,6 @@ function Idriss() {
   const [valueUn, setValueun] = useState('')
   const [valueDeux, setValuedeux] = useState('')
   const [valueTrois, setValuetrois] = useState('')
-
 
   const [arcade, setArcade] = useState(9)
   const [advenced, setAdvenced] = useState(12)
@@ -66,65 +70,46 @@ function Idriss() {
   const trois = (e) => {
     setValuetrois(e.target.value)
   }
-
-
-
   //onclick
-
   const trans = () => {
     console.log(transition);
     transition === "translate-x-0" ? setTransition("translate-x-xx") : setTransition('translate-x-0');
-
-
     mois === "text-blue-900" ? setMois('text-gray-400') : setMois('text-blue-900')
     year === "text-gray-400" ? setYear('text-blue-900') : setYear('text-gray-400')
-
     arcade === 9 ? setArcade(90) : setArcade(9)
     advenced === 12 ? setAdvenced(120) : setAdvenced(12)
     pro === 15 ? setPro(150) : setPro(15)
-
     tmp === '/mo' ? setTmp('/yr') : setTmp('/mo')
-
-
     transition === "translate-x-0" ? setChoixtmp('Yearly') : setChoixtmp('Monthly')
+    tmp === '/mo' ? setChoixNb(choixNb * 10) : setChoixNb(choixNb / 10)
 
-    transition === "translate-x-0" ? setChoixNb(choixNb*10) : setChoixNb(choixNb/10)
   }
 
   // //finishing
   const card1 = (e) => {
-
     setBgcard1('bg-gray-200')
-
     setBgcard2('bg-white')
     setBgcard3('bg-white')
 
     setChoix('Arcade')
-
-
     setChoixNb(arcade)
   }
 
   const card2 = () => {
     setBgcard2('bg-gray-200')
-
     setBgcard1('bg-white')
     setBgcard3('bg-white')
 
     setChoix('Advenced')
-
     setChoixNb(advenced)
   }
 
   const card3 = () => {
     setBgcard3('bg-gray-200')
-
     setBgcard2('bg-white')
     setBgcard1('bg-white')
 
-
     setChoix('Pro')
-
     setChoixNb(pro)
   }
 
@@ -138,18 +123,12 @@ function Idriss() {
     setActive1('hidden')
     setActive2('block')
 
-    setNav(nav)
-
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[1].classList.add('bgNb')
     });
 
-
-
-
   }
-
   // Deuxieme next et back
   const next2 = () => {
     setActive2('hidden')
@@ -196,8 +175,6 @@ function Idriss() {
     });
 
   }
-
-
   const change = () => {
     setActive2('block')
     setActive4('hidden')
@@ -205,22 +182,17 @@ function Idriss() {
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[1].classList.add('bgNb')
+
     });
 
   }
 
-
-
-
-
   return (
     <div className="Idriss">
       <div className="w-full h-screen flex justify-center items-center bg-gray-100">
-        <div className="w-[60%]  bg-white flex p-3 rounded-xl">
+        <div className="w-[60%]   bg-white flex p-3 rounded-xl">
 
           <Sidebar />
-
-
 
           <div className="w-[70%]  h-full bg-white pt-10 px-20  ">
 
@@ -232,22 +204,6 @@ function Idriss() {
               choixTmp={choixTmp} tmp={tmp} active4={active4} />
 
             <Yassine active3={active3} next3={next3} back3={back3} />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           </div >
 
