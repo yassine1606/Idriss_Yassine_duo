@@ -25,11 +25,19 @@ function Idriss() {
 
 
 
-  //Function
+  //State
+  //apparaitre les cmp
+  const [active1, setActive1] = useState('block')
+  const [active2, setActive2] = useState('hidden')
+  const [active3, setActive3] = useState('hidden')
+  const [active4, setActive4] = useState('hidden')
+
+  //les input du premier component
   const [valueUn, setValueun] = useState('')
   const [valueDeux, setValuedeux] = useState('')
   const [valueTrois, setValuetrois] = useState('')
 
+  //les prix et des act dans cmpt2
   const [arcade, setArcade] = useState(9)
   const [advenced, setAdvenced] = useState(12)
   const [pro, setPro] = useState(15)
@@ -37,28 +45,26 @@ function Idriss() {
 
 
 
-  const [active1, setActive1] = useState('block')
-  const [active2, setActive2] = useState('hidden')
-  const [active3, setActive3] = useState('hidden')
-  const [active4, setActive4] = useState('hidden')
 
+  //le active du mois ou an
   const [mois, setMois] = useState('text-blue-900')
   const [year, setYear] = useState('text-gray-400')
 
+  //le bg des trois card cmp2
   const [bgCard1, setBgcard1] = useState('bg-white')
   const [bgCard2, setBgcard2] = useState('bg-white')
   const [bgCard3, setBgcard3] = useState('bg-white')
-
+  //la transition du button
   const [transition, setTransition] = useState('translate-x-0')
 
 
-  //finishing
+  //prix 1 finishing
   const [choix, setChoix] = useState('')
   const [choixTmp, setChoixtmp] = useState('Monthly')
   const [choixNb, setChoixNb] = useState(0)
 
 
-  // onchange
+  // onchange des input
   const un = (e) => {
     setValueun(e.target.value)
   }
@@ -70,6 +76,7 @@ function Idriss() {
   const trois = (e) => {
     setValuetrois(e.target.value)
   }
+
   //onclick
   const trans = () => {
     console.log(transition);
@@ -85,7 +92,7 @@ function Idriss() {
 
   }
 
-  // //finishing
+  // le clique des trois carte et qui envoi au 4eme cmp
   const card1 = (e) => {
     setBgcard1('bg-gray-200')
     setBgcard2('bg-white')
@@ -113,7 +120,7 @@ function Idriss() {
     setChoixNb(pro)
   }
 
-
+  //pour le rajout des class
   const zz = document.querySelectorAll('.test')
 
 
@@ -152,7 +159,7 @@ function Idriss() {
 
   }
 
-  // Deuxieme next et back
+  // trosieme next et back
   const next3 = () => {
     setActive3('hidden')
     setActive4('block')
