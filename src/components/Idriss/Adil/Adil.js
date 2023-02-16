@@ -1,47 +1,20 @@
 import React from 'react'
 
-export const Adil = () => {
+export const Adil = ({choix, change, choixNb, choixTmp, tmp, active4}) => {
   return (
-    <div className='p-5'>
-      <div className='text-3xl mb-3'>
-        Finishing up
-      </div>
-      <div className='text-sm mb-5'>
-        Double-check everything looks OK before confirming
-      </div> 
-      <div className='bg-gray-100 p-10'>
-      <div className='flex justify-between'>
-        <div>
-          <div className='text-blue-900 flex flex-col'>
-            Arcade(Monthly)
-          </div>
-          <div className='text-sm text-decoration-line: underline'>
-            <a href="">Change</a>
-          </div>
-        </div>
-        <div className='text-blue-900 mt-3'>
-          $9/mo
-        </div>
-      </div>
-      <hr/>
-      <div className='flex justify-between'>
-        <div>
-          Larger stora
-        </div>
-        <div className='text-blue-900'>
-          +$2/mo
-        </div>
-      </div>
-      </div>
-      <div className='flex justify-between p-10'>
-        <div>
-          Total (per month)
-        </div>
-        <div className='text-blue-900    '>
-          $11/mo
-        </div>
-      </div>
-    </div>
+    
+   <div className={`${active4} h-full`}>
+    <div className="font-bold text-blue-900 text-4xl">Finishing up</div>
+   <div className="text-gray-500 mt-2 mb-10">Double-check everything looks OK before fconfirming</div>
+
+   <div className="bg-gray-100 px-3 py-2">
+     <p className="text-blue-900 font-bold">{choix}({choixTmp})</p>
+     <div className="flex justify-between">
+       <button onClick={change} className="text-xs text-gray-500 underline underline-offset-3 ">Change</button>
+       <p className="text-blue-900 font-bold"> ${choixNb}{tmp}</p>
+     </div>
+   </div>
+   </div>
   )
 }
 

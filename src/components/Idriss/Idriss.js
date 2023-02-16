@@ -4,6 +4,7 @@ import img2 from "../img/advenced.svg"
 import img3 from "../img/pro.svg"
 import { Cmp1 } from "./cmp1/cmp1"
 import { Cmp2 } from "./cmp2/cmp2"
+import { Adil } from "./Adil/Adil"
 function Idriss() {
 
 
@@ -259,6 +260,10 @@ function Idriss() {
 
 
 
+<Adil choix={choix} change={change} choixNb={choixNb} 
+choixTmp={choixTmp} tmp={tmp} active4={active4}/>
+
+ 
 
 
 
