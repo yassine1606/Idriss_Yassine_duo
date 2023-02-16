@@ -26,7 +26,7 @@ export const Adil = () => {
       <hr/>
       <div className='flex justify-between'>
         <div>
-          Larger storage 
+          Larger storag
         </div>
         <div className='text-blue-900'>
           +$2/mo
