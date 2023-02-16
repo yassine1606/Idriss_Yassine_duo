@@ -2,6 +2,8 @@ import { useState } from "react"
 import img1 from "../img/arcade.svg"
 import img2 from "../img/advenced.svg"
 import img3 from "../img/pro.svg"
+import { Cmp1 } from "./cmp1/cmp1"
+import { Cmp2 } from "./cmp2/cmp2"
 function Idriss() {
 
 
@@ -126,7 +128,7 @@ function Idriss() {
   }
 
 
-  // const zz = document.querySelectorAll('.test')
+  const zz = document.querySelectorAll('.test')
 
 
   // SUIVANT
@@ -137,7 +139,10 @@ function Idriss() {
 
     setNav(nav)
 
-    
+   zz.forEach(element => {
+    element.classList.remove('bgNb')
+    zz[1].classList.add('bgNb')
+   });
 
 
 
@@ -149,12 +154,21 @@ function Idriss() {
     setActive2('hidden')
     setActive4('block')
 
+    zz.forEach(element => {
+      element.classList.remove('bgNb')
+      zz[3].classList.add('bgNb')
+     });
+
   }
   const back2 = () => {
     setActive1('block')
     setActive2('hidden')
     setActive4('hidden')
 
+    zz.forEach(element => {
+      element.classList.remove('bgNb')
+      zz[0].classList.add('bgNb')
+     });
 
   }
 
@@ -163,13 +177,14 @@ function Idriss() {
     setActive2('block')
     setActive4('hidden')
 
-   
+    zz.forEach(element => {
+      element.classList.remove('bgNb')
+      zz[1].classList.add('bgNb')
+     });
  
     setChoixNb(0)
 
-    setBgcard2('bg-white')
-    setBgcard1('bg-white')
-    setBgcard3('bg-white')
+   
 
    
     
@@ -193,22 +208,22 @@ function Idriss() {
             <ul id="oui">
 
               <li className="flex text-white mb-7 text-sm">
-                <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test bgNb`}>1</div>
+                <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test `}>1</div>
                 <div className="uppercase">
                   <div className="font-light text-xs">STEP 1</div>
                   <div className="font-bold text-sm" >your info</div>
                 </div>
               </li>
 
-              <li className="flex text-white mb-7 text-sm test">
-                <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test `}>2</div>
+              <li className="flex text-white mb-7 text-sm  ">
+                <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test`}>2</div>
                 <div className="uppercase">
                   <div className="font-light text-xs">STEP 2</div>
                   <div className="font-bold text-sm" >SELECT PLAN</div>
                 </div>
               </li>
 
-              <li className="flex text-white mb-7 text-sm test">
+              <li className="flex text-white mb-7 text-sm  ">
                 <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test`}>3</div>
                 <div className="uppercase">
                   <div className="font-light text-xs">STEP 3</div>
@@ -216,7 +231,7 @@ function Idriss() {
                 </div>
               </li>
 
-              <li className="flex text-white mb-7 text-sm test">
+              <li className="flex text-white mb-7 text-sm  ">
                 <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test`}>4</div>
                 <div className="uppercase">
                   <div className="font-light text-xs">STEP 4</div>
@@ -233,76 +248,12 @@ function Idriss() {
 
           <div className="w-[70%]  h-full bg-white pt-10 px-20  ">
 
-            <div className={`${active1} h-full`}>
-              <div className="font-bold text-blue-900 text-4xl">Personal info</div>
-              <div className="text-gray-500 mt-2 mb-10">Please provide your name, email, address, and phone number</div>
-              <div className="mb-5">
-                <p className="text-blue-900 font-bold">Your name is:{valueUn}</p>
-                <input id="ipt" className="p-2 w-full border-2 border-gray-200 rounded-xl" type="text" onChange={un} placeholder="Vingt-Six" />
-              </div>
-              <div className="mb-5">
-                <p className="text-blue-900 font-bold">Your email is:{valueDeux}</p>
-                <input className="p-2 w-full border-2 border-gray-200 rounded-xl" type="text" onChange={deux} placeholder="vingt-six@email.com" />
-              </div>
-              <div className=" mb-20">
-                <p className="text-blue-900 font-bold">Your name is:{valueTrois}</p>
-                <input className="p-2 w-full border-2 border-gray-200 rounded-xl" type="text" onChange={trois} placeholder="e.g+1 234 567 890" />
-              </div>
-              <div className="flex justify-end">
-                <button onClick={next} className="px-4 py-3 text-white bg-blue-900 rounded-xl ">Next Step</button>
-              </div>
-            </div>
+          <Cmp1 un={un} deux={deux} trois={trois} next={next} active1={active1} valueUn={valueUn} valueDeux={valueDeux} valueTrois={valueTrois}/>
 
 
 
-
-
-
-            <div className={`h-full ${active2}`}>
-              <div className="font-bold text-blue-900 text-4xl">Select your plan</div>
-              <div className="text-gray-500 mt-2 mb-10">You have the option of monthly or yearly billing</div>
-
-              <div className="h-[33%] w-full flex mb-10 ">
-                <div onClick={card1} className={`border-2 w-[35%] mr-3 rounded-xl h-full flex flex-col justify-between border-gray p-4 hover:border-2 hover:border-violet-300 cursor-pointer ${bgCard1}`}>
-                  <div> <img src={img1} alt="" /></div>
-                  <div>
-                    <p className="font-bold text-blue-900">Arcade</p>
-                    <p className="text-xs text-gray-400 font-semibold">${arcade}{tmp}</p>
-                  </div>
-                </div>
-
-                <div onClick={card2} className={`border-2 w-[35%] mr-3 rounded-xl h-full flex flex-col justify-between border-gray p-4 hover:border-2 hover:border-violet-300 cursor-pointer ${bgCard2}`}>
-                  <div> <img src={img2} alt="" /></div>
-                  <div>
-                    <p className="font-bold text-blue-900">Advenced</p>
-                    <p className="text-xs text-gray-400 font-semibold">${advenced}{tmp}</p>
-                  </div>
-                </div>
-
-                <div onClick={card3} className={`border-2 w-[35%]  rounded-xl h-full flex flex-col justify-between border-gray p-4 hover:border-2 hover:border-violet-300 cursor-pointer ${bgCard3}`}>
-                  <div> <img src={img3} alt="" /></div>
-                  <div>
-                    <p className=" font-bold text-blue-900">Pro</p>
-                    <p className="text-xs text-gray-400 font-semibold">${pro}{tmp}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-blue-100 flex justify-around px-5 mb-16 py-3">
-                <div className={`font-bold ${mois}`}>Monthly</div>
-                <div>
-                  <button onClick={trans} className="bg-blue-900 w-[50px] rounded-xl h-[85%] p-1">
-                    <div className={`bg-white w-[30%] rounded-full h-full ${transition} transition delay-400 duration-200 linear cursor-pointer`}></div>
-                  </button>
-                </div>
-                <div className={`font-bold ${year}`}>Yearly</div>
-              </div>
-
-              <div className="flex justify-between">
-                <button onClick={back2} className="text-blue-900 font-bold ">Go Back</button> <button onClick={next2} className="px-4 py-3 text-white bg-blue-900 rounded-xl ">Next Step</button>
-              </div>
-
-            </div>
+          <Cmp2 active2={active2} card1={card1} card2={card2} card3={card3} bgCard1={bgCard1} bgCard2={bgCard2} bgCard3={bgCard3} next2={next2} back2={back2} arcade={arcade} pro={pro} advenced={advenced} tmp={tmp} trans={trans} transition={transition} img1={img1} img2={img2} img3={img3} mois={mois} year={year}/>
+           
 
 
 
@@ -325,8 +276,7 @@ function Idriss() {
 
 
 
-
-
+{/* 
             <div className={`${active4} h-full`}>
 
               <div className="font-bold text-blue-900 text-4xl">Finishing up</div>
@@ -341,7 +291,7 @@ function Idriss() {
 
 
               </div>
-            </div>
+            </div> */}
 
           </div>
 
