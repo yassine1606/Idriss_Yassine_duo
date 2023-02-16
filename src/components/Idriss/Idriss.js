@@ -1,10 +1,13 @@
-import { useState } from "react" 
+
+import { useState } from "react"
 import img1 from "../img/arcade.svg"
 import img2 from "../img/advenced.svg"
 import img3 from "../img/pro.svg"
 import { Cmp1 } from "./cmp1/cmp1"
 import { Cmp2 } from "./cmp2/cmp2"
 import { Adil } from "./Adil/Adil"
+import { Sidebar } from "./sidebar/sidebar"
+import { Yassine } from "./yassine/yassine"
 function Idriss() {
 
 
@@ -15,10 +18,15 @@ function Idriss() {
     { nb: 3, step: "step3", titre: "add-ons" },
     { nb: 4, step: "step4", titre: "summary" }
   ])
-
+ 
 
  //Function
-  const [valueUn, setValueun] = useState('')
+ 
+
+
+
+  //Function
+   const [valueUn, setValueun] = useState('')
   const [valueDeux, setValuedeux] = useState('')
   const [valueTrois, setValuetrois] = useState('')
 
@@ -30,9 +38,9 @@ function Idriss() {
 
 
   const [active1, setActive1] = useState('block')
-  const [active2, setActive2] = useState('block')
-  // const [active3, setActive3] = useState('hidden')
-  const [active4, setActive4] = useState('block')
+  const [active2, setActive2] = useState('hidden')
+  const [active3, setActive3] = useState('hidden')
+  const [active4, setActive4] = useState('hidden')
 
   const [mois, setMois] = useState('text-blue-900')
   const [year, setYear] = useState('text-gray-400')
@@ -85,6 +93,8 @@ function Idriss() {
 
     setChoix('Arcade')
 
+
+
     setChoixNb(arcade)
   }
 
@@ -123,19 +133,27 @@ function Idriss() {
 
     setNav(nav)
 
-zz.forEach(element => {
-    element.classList.remove('bgNb')
-    zz[1].classList.add('bgNb')
-});
+
+    zz.forEach(element => {
+      element.classList.remove('bgNb')
+      zz[1].classList.add('bgNb')
+    });
+
+
+
+
   }
   // Deuxieme next et back
   const next2 = () => {
     setActive2('hidden')
-    setActive4('block')
+
+    setActive3('block')
+
     zz.forEach(element => {
       element.classList.remove('bgNb')
-      zz[3].classList.add('bgNb')
-});
+      zz[2].classList.add('bgNb')
+    });
+
   }
   const back2 = () => {
     setActive1('block')
@@ -144,7 +162,33 @@ zz.forEach(element => {
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[0].classList.add('bgNb')
-});
+
+    });
+
+  }
+
+  // Deuxieme next et back
+  const next3 = () => {
+    setActive3('hidden')
+    setActive4('block')
+
+    zz.forEach(element => {
+      element.classList.remove('bgNb')
+      zz[3].classList.add('bgNb')
+    });
+
+  }
+  const back3 = () => {
+    setActive1('hidden')
+    setActive2('block')
+    setActive3('hidden')
+    setActive4('hidden')
+
+    zz.forEach(element => {
+      element.classList.remove('bgNb')
+      zz[1].classList.add('bgNb')
+    });
+
   }
   const change = () => {
     setActive2('block')
@@ -152,80 +196,40 @@ zz.forEach(element => {
     zz.forEach(element => {
       element.classList.remove('bgNb')
       zz[1].classList.add('bgNb')
-});
+
+    });
+
     setChoixNb(0)
+
+
+
+
+
   }
-  // 
-  // if (bgCard1 === 'bg-white' && bgCard2 === 'bg-white' && bgCard3 === 'bg-white'){
-  //   alert('choisi')
-  // }
-return (
+
+
+
+
+
+  return (
     <div className="Idriss">
       <div className="w-full h-screen flex justify-center items-center bg-gray-100">
         <div className="w-[60%] h-[77%] bg-white flex p-3 rounded-xl">
 
-          <div id="b" className="rounded-xl  pl-9 pt-10 w-[30%]">
-            <ul id="oui">
+          <Sidebar />
 
-              <li className="flex text-white mb-7 text-sm">
-                <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test `}>1</div>
-                <div className="uppercase">
-                  <div className="font-light text-xs">STEP 1</div>
-                  <div className="font-bold text-sm" >your info</div>
-                </div>
-              </li>
 
-              <li className="flex text-white mb-7 text-sm  ">
-                <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test`}>2</div>
-                <div className="uppercase">
-                  <div className="font-light text-xs">STEP 2</div>
-                  <div className="font-bold text-sm" >SELECT PLAN</div>
-                </div>
-              </li>
-
-              <li className="flex text-white mb-7 text-sm  ">
-                <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test`}>3</div>
-                <div className="uppercase">
-                  <div className="font-light text-xs">STEP 3</div>
-                  <div className="font-bold text-sm" >ADD-ONS</div>
-                </div>
-              </li>
-
-              <li className="flex text-white mb-7 text-sm  ">
-                <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test`}>4</div>
-                <div className="uppercase">
-                  <div className="font-light text-xs">STEP 4</div>
-                  <div className="font-bold text-sm" >SUMMARY</div>
-                </div>
-              </li>
- 
-
-            </ul>
-          </div>
-
- 
-          
 
           <div className="w-[70%]  h-full bg-white pt-10 px-20  ">
 
-          <Cmp1 un={un} deux={deux} trois={trois} next={next} active1={active1} valueUn={valueUn} valueDeux={valueDeux} valueTrois={valueTrois}/>
+            <Cmp1 un={un} deux={deux} trois={trois} next={next} active1={active1} valueUn={valueUn} valueDeux={valueDeux} valueTrois={valueTrois} />
 
+            <Cmp2 active2={active2} card1={card1} card2={card2} card3={card3} bgCard1={bgCard1} bgCard2={bgCard2} bgCard3={bgCard3} next2={next2} back2={back2} arcade={arcade} pro={pro} advenced={advenced} tmp={tmp} trans={trans} transition={transition} img1={img1} img2={img2} img3={img3} mois={mois} year={year} />
 
+            <Adil choix={choix} change={change} choixNb={choixNb}
+              choixTmp={choixTmp} tmp={tmp} active4={active4} />
 
-          <Cmp2 active2={active2} card1={card1} card2={card2} card3={card3} bgCard1={bgCard1} bgCard2={bgCard2} bgCard3={bgCard3} next2={next2} back2={back2} arcade={arcade} pro={pro} advenced={advenced} tmp={tmp} trans={trans} transition={transition} img1={img1} img2={img2} img3={img3} mois={mois} year={year}/>
-           
-
-
-
-
-
-
-
-
-<Adil choix={choix} change={change} choixNb={choixNb} 
-choixTmp={choixTmp} tmp={tmp} active4={active4}/>
-
- 
+            <Yassine active3={active3} next3={next3} back3={back3}/>
 
 
 
@@ -240,12 +244,16 @@ choixTmp={choixTmp} tmp={tmp} active4={active4}/>
 
 
 
- 
-           </div>
+
+
+
+          </div >
 
         </div>
-      </div>
-    </div>
+
+      </div >
+    </div >
+
   )
 
 }

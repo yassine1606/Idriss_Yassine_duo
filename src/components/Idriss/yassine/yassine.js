@@ -1,15 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
 
-export const Yassine = ({back2, next2}) => {
-    const [isClicked, setIsClicked] = useState(false);
 
-  function handleClick() {
-    setIsClicked(!isClicked);
-  }
-
+export const Yassine = ({back3, next3,active3}) => {
   return (
-    <div>
+    <div className={`${active3} h-full`}>
         <h1 className='text-3xl	'>Pick add-ons</h1>
         <p>Add-ons help enhance your gam ing experience</p>
         <div>
@@ -41,8 +36,8 @@ export const Yassine = ({back2, next2}) => {
             <span className='text-red-500 mt-5'>+2/mo</span>
             </div>
             <div className="flex justify-between">
-                <button onClick={back2} className="text-blue-900 font-bold ">Go Back</button> <button onClick={next2} className="px-4 py-3 text-white bg-blue-900 rounded-xl ">Next Step</button>
-            </div>
+                <button onClick={back3} className="text-blue-900 font-bold ">Go Back</button> <button onClick={next3} className="px-4 py-3 text-white bg-blue-900 rounded-xl ">Next Step</button>
+              </div>
         </div>
     </div>
   )
