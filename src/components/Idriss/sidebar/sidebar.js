@@ -2,12 +2,12 @@ import React from 'react'
 
 export const Sidebar = () => {
     return (
-        
+
         <div id="b" className="rounded-xl  pl-9 pt-10 w-[30%]">
             <ul id="oui">
 
                 <li className="flex text-white mb-7 text-sm">
-                    <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test `}>1</div>
+                    <div className={`mr-6 px-4 flex justify-center text-sm items-center rounded-full border-2 border-white font-bold test bgNb`}>1</div>
                     <div className="uppercase">
                         <div className="font-light text-xs">STEP 1</div>
                         <div className="font-bold text-sm" >your info</div>

@@ -156,7 +156,7 @@ function Idriss() {
 
     zz.forEach(element => {
       element.classList.remove('bgNb')
-      zz[3].classList.add('bgNb')
+      zz[2].classList.add('bgNb')
     });
 
   }
@@ -179,19 +179,19 @@ function Idriss() {
 
     zz.forEach(element => {
       element.classList.remove('bgNb')
-      zz[4].classList.add('bgNb')
+      zz[3].classList.add('bgNb')
     });
 
   }
   const back3 = () => {
     setActive1('hidden')
-    setActive2('hidden')
-    setActive3('block')
+    setActive2('block')
+    setActive3('hidden')
     setActive4('hidden')
 
     zz.forEach(element => {
       element.classList.remove('bgNb')
-      zz[0].classList.add('bgNb')
+      zz[1].classList.add('bgNb')
     });
 
   }
