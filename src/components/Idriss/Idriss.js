@@ -88,6 +88,7 @@ function Idriss() {
 
     transition === "translate-x-0" ? setChoixtmp('Yearly') : setChoixtmp('Monthly')
 
+    transition === "translate-x-0" ? setChoixNb(choixNb*10) : setChoixNb(choixNb/10)
   }
 
   // //finishing
@@ -206,22 +207,16 @@ function Idriss() {
       zz[1].classList.add('bgNb')
     });
 
-    setChoixNb(0)
-
-
-
-
-
   }
 
- 
+
 
 
 
   return (
     <div className="Idriss">
       <div className="w-full h-screen flex justify-center items-center bg-gray-100">
-        <div className="w-[60%] h-[77%] bg-white flex p-3 rounded-xl">
+        <div className="w-[60%]  bg-white flex p-3 rounded-xl">
 
           <Sidebar />
 
@@ -236,7 +231,7 @@ function Idriss() {
             <Adil choix={choix} change={change} choixNb={choixNb}
               choixTmp={choixTmp} tmp={tmp} active4={active4} />
 
-            <Yassine active3={active3} next3={next3} back3={back3}/>
+            <Yassine active3={active3} next3={next3} back3={back3} />
 
 
 

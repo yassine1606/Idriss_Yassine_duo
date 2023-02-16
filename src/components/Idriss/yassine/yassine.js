@@ -3,7 +3,7 @@ import React from 'react'
 
 export const Yassine = ({back3, next3,active3}) => {
   return (
-    <div className={`${active3} h-full`}>
+    <div className={`${active3}`}>
         <h1 className='text-3xl	'>Pick add-ons</h1>
         <p>Add-ons help enhance your gam ing experience</p>
         <div>
